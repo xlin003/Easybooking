@@ -1,0 +1,11 @@
+/* DELETE 'easybookingDB' database*/
+DROP SCHEMA IF EXISTS easybookingDB;
+/* DELETE USER 'sd' AT LOCAL SERVER*/
+DROP USER IF EXISTS 'sd'@'localhost';
+
+/* CREATE ''easybookingDB' DATABASE */
+CREATE SCHEMA easybookingDB;
+/* CREATE THE USER 'sd' AT LOCAL SERVER WITH PASSWORD 'sd' */
+CREATE USER IF NOT EXISTS 'sd'@'localhost' IDENTIFIED BY 'sd';
+/* GRANT FULL ACCESS TO THE DATABASE FOR THE USER 'sd' AT LOCAL SERVER*/
+GRANT ALL ON accountsDB.* TO 'sd'@'localhost';

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE orm PUBLIC 
+	"-//Sun Microsystems, Inc.//DTD Java Data Objects Metadata 2.0//EN"
+	"http://java.sun.com/dtd/orm_2_0.dtd">
+<orm>
+    <package name="es.deusto.ingenieria.sd.eb.datanucleus.jdo.dao">
+        <class name="Usuario">
+            <field name="email">
+                <column length="50" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="nombre">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="listReserva" table="USERS_BOOKINGS">
+                <collection element-type="es.deusto.ingenieria.sd.eb.server.data.Reserva"/>
+				<join/>
+            </field>
+        </class>
+        <class name="Vuelo">
+			<field name="codVuelo">
+                <column length="128" jdbc-type="VARCHAR"/>
+            </field>
+            <field name="user">
+            </field>
+			<field name="address">                
+            </field>
+			<field name="openDate">                
+            </field>
+        </class>
+		
+		<class name="Reserva">
+            <field name="street">
+                <column length="128" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="city">
+                <column length="128" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="country">
+                <column length="128" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="postcode">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+        </class>
+		<class name="Pago">
+            <field name="street">
+                <column length="128" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="city">
+                <column length="128" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="country">
+                <column length="128" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="postcode">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+        </class>
+		<class name="Aeropuerto">
+            <field name="street">
+                <column length="128" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="city">
+                <column length="128" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="country">
+                <column length="128" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="postcode">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+        </class>
+    </package>
+</orm>
